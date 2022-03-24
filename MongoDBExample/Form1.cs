@@ -89,5 +89,13 @@ namespace MongoDBExample
             Id = gridView1.GetFocusedRowCellValue("Id").ToString();
             loadPerson();
         }
+
+        private void btn_delete_Click(object sender, EventArgs e)
+        {
+            //delete data
+            collection.DeleteOne(person => person.Id == ObjectId.Parse(Id));
+            LoadData();
+            refresh();
+        }
     }
 }
