@@ -28,7 +28,6 @@ namespace MongoDBExample
         {
 
            LoadData();
-            gridView1
         }
         // Load data from MongoDB
         public void LoadData()
