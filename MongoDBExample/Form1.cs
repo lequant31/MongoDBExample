@@ -18,11 +18,14 @@ namespace MongoDBExample
             InitializeComponent();
 
         }
-
+        // connect
        static MongoClient client = new MongoClient();
+        //create Databse
        static IMongoDatabase db = client.GetDatabase("Airdrop");
+        //Create table
        static IMongoCollection<Person> collection = db.GetCollection<Person>("employees");
         Person person = new Person();
+
         static string Id;
         private void Form1_Load(object sender, EventArgs e)
         {
