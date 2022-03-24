@@ -38,6 +38,14 @@ namespace MongoDBExample
             var list = collection.AsQueryable().ToList<Person>();
             gridControl1.DataSource = list;
         }
+        // refresh 
+        private void refresh()
+        {
+            person.Id = ObjectId.Empty;
+            person.FirstName = null;
+            person.LastName = null;
+            person.Age = 0;
+        }
         // load one person
         private void loadPerson()
         {
@@ -68,6 +76,7 @@ namespace MongoDBExample
            
            
             LoadData();
+            refresh();
         }
         private void simpleButton1_Click(object sender, EventArgs e)
         {
